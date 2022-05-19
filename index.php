@@ -1,5 +1,7 @@
 <?php 
-$paragraph = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident impedit, quas maxime illum in molestias at voluptatem quidem reiciendis odio autem numquam vero, quisquam excepturi nisi fuga ipsam est facere.'
+$paragraph = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident impedit, quas maxime illum in molestias at voluptatem quidem reiciendis odio autem numquam vero, quisquam excepturi nisi fuga ipsam est facere.';
+$badWord = $_GET['badWord'];
+$new_paragraph = str_replace($badWord, '***', $paragraph)
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +14,7 @@ $paragraph = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Providen
 </head>
 <body>
     <p>
-        <?php echo $paragraph ?>
+        <?php $_GET['badWord']; echo $new_paragraph ?>
     </p>
 </body>
 </html>
